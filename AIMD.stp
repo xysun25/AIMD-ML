@@ -103,6 +103,16 @@
         <Value>-1</Value>
       </Property>
     </Document>
+    <Document>
+      <ID>{5684BC95-14FF-4130-8990-B134C5B12B99}</ID>
+      <Paths>1</Paths>
+      <URL>.\Ti3AlC2 (0 0 1) (2) (0 0 1) (0 0 -1) (0 0 1).xsd</URL>
+      <Property>
+        <Name>Visible</Name>
+        <Type>11</Type>
+        <Value>-1</Value>
+      </Property>
+    </Document>
   </DocumentManager>
   <ViewRegistry>
     <Frame>
@@ -232,16 +242,30 @@
       </View>
     </Frame>
     <Frame>
-      <Active>true</Active>
+      <Active>false</Active>
       <Left>78</Left>
       <Top>78</Top>
       <Width>681</Width>
       <Height>325</Height>
-      <Maximized>true</Maximized>
+      <Maximized>false</Maximized>
       <Minimized>false</Minimized>
       <View>
         <Active>true</Active>
         <DocumentID>{9EAD6BDF-5411-4D4F-AB31-59B4E9AC0ECB}</DocumentID>
+        <Type>SVViewer3D.Viewer3DControl</Type>
+      </View>
+    </Frame>
+    <Frame>
+      <Active>true</Active>
+      <Left>0</Left>
+      <Top>0</Top>
+      <Width>953</Width>
+      <Height>487</Height>
+      <Maximized>true</Maximized>
+      <Minimized>false</Minimized>
+      <View>
+        <Active>true</Active>
+        <DocumentID>{5684BC95-14FF-4130-8990-B134C5B12B99}</DocumentID>
         <Type>SVViewer3D.Viewer3DControl</Type>
       </View>
     </Frame>
