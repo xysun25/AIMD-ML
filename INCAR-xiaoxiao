@@ -1,0 +1,59 @@
+##### initial parameters I/O #####
+SYSTEM = Ceo2
+NPAR = 4
+# NCORE = 5
+ISTART =  1                      
+ICHARG =  1      
+LWAVE  = F        
+LCHARG = F      
+LVTOT  = .FALSE.         
+LVHAR  = .FALSE.  
+LELF   = .FALSE.
+LORBIT = 11   
+
+   
+### Electronic Relaxation ###
+ENCUT  =  450
+ISMEAR =  0       
+SIGMA  =  0.05 
+EDIFF  =  1E-5  
+NELMIN =  5   
+NELM   =  100     
+GGA    =  PE
+LREAL  =  A
+#LDIPOL =  TRUE
+#IDIPOL =  3
+ISYM = 0
+IVDW = 11
+ALGO = Fast
+# PREC = Accurate
+# ADDGRID = .TRUE.
+# AMIX = 0.2
+# BMIX = 0.0001
+# AMIX_MAG = 0.8
+# BMIX_MAG = 0.0001
+# MAXMIX = 40
+
+### Magnetic parameters ###
+ISPIN  =  2      ## Ce29 Ru1 O62 C1
+MAGMON =  29*0 1*3 62*0 1*0
+# NUPDOWN = 0
+# VOSKOWN = 1
+
+### Geometry opt parameters ###
+EDIFFG = -0.02
+IBRION = 2
+POTIM  = 0.2
+NSW    = 500
+ISIF   = 2
+# NFREE = 2
+
+### DFT +U ###
+ LDAU  =  T
+ LDAUTYPE = 2
+ LDAUL =    3  -1  -1  -1
+ LDAUU =  4.0 0.0 0.0 0.0
+ LDAUJ =  0.0 0.0 0.0 0.0
+# LDAUALPHA = 0.0 0.5
+# LDAUPRINT = 2
+ LMAXMIX = 6
