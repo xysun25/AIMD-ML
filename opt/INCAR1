@@ -1,0 +1,46 @@
+SYSTEM = vasp
+
+# initial parameters(I/O)
+NPAR = 4    # parallelize cores number
+ISTART = 1  # 1 presents that read from WAVECAR, otherwise guess first. 0 presents guess first.
+ICHARG = 1  # 1 presents that read from CHGCAR, otherwise guess first. 0 presents calculate from WAVECAR, if not, value is 2.
+LAECHG = .FALSE.  # T will reconstruct three distinct all-electron densities
+LWAVE = .F.
+LCHARG = .F.
+#GGA = PE  # type of exchange-correlation in accordance with the POTCAR file
+
+# Electronic relaxation(SCF parameters)
+ENCUT = 400  # Recommendation: 1.2 * the maximum value of all elements' ENMAX values in POTCAR. The value from convergence test is better.
+ISMEAR = 0   # metal >=0, other 0~-5. ISMEAR=1 SIGMA=0.2 presents metal. ISMEAR=0, SIGMA=0.05 presents semiconductor.
+SIGMA = 0.05  #0.05 for semiconductor and insulator, 0.2 for metal
+EDIFF = 1E-5  # SCF accuracy. opt uses 1E-5, TS and frequency uses 1E-6.
+ALGO = Fast  # for electronic minimisation algorithm, Default: Normal 
+LREAL = Auto  # Projection operators: automatic
+#NELM=300
+
+# Ionic Relaxation(Geometry opt parameters)
+EDIFFG = -0.05  # break condition for the ionic relaxation loop.
+IBRION = 2  # 2 for CG, 0 for MD, 1 for quasi-newton, -1 for ions not moving but cycle number is NSW.
+NSW = 300  # maximum number of ionic step, 0 for ions not moving, 300 is ok.
+#POTIM = 0.1  # For IBRION=1,2,3(inoic relaxation)and 5 default=0.5, serves as a scaling constant for the forces. 
+ISIF = 3  # 3 for all direction.
+ISYM = 0  # 0 presents that symmetry is switched off(cleave surface), otherwise is default value, 1/2(primitive cell).  
+
+# Spin Polarization
+#ISPIN = 2  #2 for perform spin polarized calculations, 1 is not
+#MAGMOM = 28*1.0 12*5.0 4*5.0   # transition metal:5.0, others:1.0.the first is atom numbers. 
+
+# DFT-D Correction
+IVDW = 11  # the weak interaction correction term, 11 for Grimme R=0 DFT-D3.
+
+# DFT+U   for strong interaction correction
+#LDAU = .TRUE.
+#LDAUTYPE = 2  # generally if LDAU is true.
+#LDAUL = -1 -1 2 2  # -1 for without regard, 2 for add U to metal. 
+#LDAUU = 0.0 0.0 3.0 3.0  # from articles.
+#LDAUJ = 0.0 0.0 0.0 0.0  # from articles.
+#LDAUPRINT = 0 # not output, otherwise is 1 or 2. 
+#LMAXMIX = 4  # 4 for d-mental, 6 for f-metal.
+
+# Solvation
+#LSOL = .TRUE.  #implicit solvent model, dielectric constant of water = 80. 
