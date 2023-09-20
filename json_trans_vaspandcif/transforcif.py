@@ -2,4 +2,4 @@ from ase.io import read, write
 
 atoms = read('structure.json', format = 'json')
 writ('struc.cif', atoms)
-write('struc.vasp', atoms)
+wrie('struc.vasp', atoms)
