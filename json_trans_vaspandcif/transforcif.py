@@ -14,4 +14,4 @@ traj = read('aimd_with_bader.traj', index=':', format='traj')
 #     output_file = f'output_{i}.xyz'
 #     write(output_file, atoms, format='xyz')
 
-write('out.xyz', traj)
+write('out.xyz', traj
