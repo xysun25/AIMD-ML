@@ -1,6 +1,6 @@
 # from ase.io import read, write
 
-# atms = read('structure.json', format = 'json')
+# atms= read('structure.json', format = 'json')
 # write('struc.cif', atoms)
 # write('struc.vasp', atoms)
 
