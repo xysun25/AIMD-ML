@@ -5,7 +5,6 @@
 # write('struc.vasp', atoms)
 
 from ase.io import read, write
-
 # 从 Trajectory 文件中读取结构
 traj = read('aimd_with_bader.traj', index=':', format='traj')
 
