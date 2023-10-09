@@ -10,7 +10,7 @@ f2_m = 280
 # g/cm3
 density = 1.4
 
-box_ol = a * b * c / 10**24  # cm3
+box_vol = a * b * c / 10**24  # cm3
 avo_con = 6.02214076 * 10**23  # Avogadro constant
 
 n = density * box_vol * avo_con / (f1_m + f2_m)
