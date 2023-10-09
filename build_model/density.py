@@ -6,7 +6,6 @@ c = 15.0
 # g/mol
 f1_m = 127
 f2_m = 280
-
 # g/cm3
 density = 1.4
 
