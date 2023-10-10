@@ -7,7 +7,7 @@ data_VESTA_phase_1
 _chemical_name_common                  'PDB File                              '
 _cell_length_a                         17.396250
 _cell_length_b                         17.396250
-_cell_length_c                         17.396250
+_cell_length_c                         17.39625
 _cell_angle_alpha                      90.000000
 _cell_angle_beta                       90.000000
 _cell_angle_gamma                      90.000000
