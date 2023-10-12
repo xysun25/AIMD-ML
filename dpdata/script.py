@@ -1,18 +1,22 @@
 import dpdata
-import numpy as np
-d_outcar = dpdata.LabeledSystem("OUTCAR")
 
-atom_names = d_outcar["atom_names"]
-coords = d_outcar["coords"]
-forces = d_outcar["forces"]
+outcar_data = dpdata.LabeledSystem("OUTCAR")
 
-output_file = "vasp_data.txt" 
+# 提取数据
+coords = outcar_data["coords"]
+forces = outcar_data["forces"]
+# temperatures = outcar_data.get_temperatures()
+total_energy = outcar_data["energies"]
 
-with open(output_file, "w") as file:
-    file.write("原子坐标:\n")
-    np.savetxt(file, coords, fmt='%10.6f', delimiter=' ')
-    
-    file.write("\n力:\n")
-    np.savetxt(file, forces, fmt='%10.6f', delimiter=' ')
-    
-print(f"数据已保存到文件 {output_file}")
+# 输出数据
+print("coords:")
+print(coords)
+
+print("\nForces:")
+print(forces)
+
+# print("\nTemperatures:")
+# print(temperatures)
+
+print("\nTotal Energy:")
+print(total_energy)
