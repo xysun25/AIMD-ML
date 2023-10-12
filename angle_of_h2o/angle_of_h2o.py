@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np 
 # 假设你有水分子的坐标，其中 oxygen 是氧原子的坐标
 # 这里假设你已经有了水分子的坐标数据
 # 例如，oxygen = [x_o, y_o, z_o]
