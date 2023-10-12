@@ -1,6 +1,18 @@
 import dpdata
-
+import numpy as np
 d_outcar = dpdata.LabeledSystem("OUTCAR")
-coords = d_outcar["coords"]
 
-d_outcar.to("lammps/lmp", "conf.lmp", frame_idx=0)
+atom_names = d_outcar["atom_names"]
+coords = d_outcar["coords"]
+forces = d_outcar["forces"]
+
+output_file = "vasp_data.txt" 
+
+with open(output_file, "w") as file:
+    file.write("原子坐标:\n")
+    np.savetxt(file, coords, fmt='%10.6f', delimiter=' ')
+    
+    file.write("\n力:\n")
+    np.savetxt(file, forces, fmt='%10.6f', delimiter=' ')
+    
+print(f"数据已保存到文件 {output_file}")
