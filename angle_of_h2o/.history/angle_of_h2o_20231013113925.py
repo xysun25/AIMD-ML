@@ -59,10 +59,9 @@ output_filename = 'output_angles.txt'
 with open(output_filename, 'w') as file:
     for angle in angles:
         file.write(f'{angle:.2f}\n')
-
 plt.hist(angles, bins=50, density=True, alpha=0.6, color='b', edgecolor='black')
-plt.title('Orientation distribution probability')
-plt.xlabel('degree')
-plt.ylabel('probability density')
+plt.title('角度概率密度分布')
+plt.xlabel('角度 (度)')
+plt.ylabel('概率密度')
 plt.grid(True)
 plt.show()
