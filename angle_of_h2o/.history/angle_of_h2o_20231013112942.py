@@ -49,12 +49,6 @@ for normal_vector in normal_vectors:
     angle = calculate_angle_between_vectors(z, normal_vector)
     angles.append(angle)
 
-# # 输出夹角分布
-# print("表面与水分子平面法向量之间的夹角分布:")
-# print(angles)
-
-# 角度分布写入文件
-output_filename = 'output_angles.txt' 
-with open(output_filename, 'w') as file:
-    for angle in angles:
-        file.write(f'{angle:.2f}\n')
+# 输出夹角分布
+print("表面与水分子平面法向量之间的夹角分布:")
+print(angles)

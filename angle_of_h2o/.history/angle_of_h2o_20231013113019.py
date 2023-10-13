@@ -53,8 +53,10 @@ for normal_vector in normal_vectors:
 # print("表面与水分子平面法向量之间的夹角分布:")
 # print(angles)
 
-# 角度分布写入文件
-output_filename = 'output_angles.txt' 
+# 将角度分布写入文件
+output_filename = 'output_angles.txt'  # 输出文件名
 with open(output_filename, 'w') as file:
     for angle in angles:
         file.write(f'{angle:.2f}\n')
+
+print(f"与固体表面相互作用的水分子的角度分布已经写入到 {output_filename} 文件中。")

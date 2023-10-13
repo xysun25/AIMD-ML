@@ -40,21 +40,15 @@ for i in range(len(oxygens)):
     normal_vector = calculate_normal_vector(oxygens[i], hydrogen1[i], hydrogen2[i])
     normal_vectors.append(normal_vector)
 
-# 表面z = (1,0,0)
-z = np.array([1, 0, 0])
+# 定义目标向量 (1, 0, 0)
+target_vector = np.array([1, 0, 0])
 
-# 计算z与水分子平面法向量间夹角
+# 计算向量 (1, 0, 0) 与水分子平面法向量之间的夹角
 angles = []
 for normal_vector in normal_vectors:
-    angle = calculate_angle_between_vectors(z, normal_vector)
+    angle = calculate_angle_between_vectors(target_vector, normal_vector)
     angles.append(angle)
 
-# # 输出夹角分布
-# print("表面与水分子平面法向量之间的夹角分布:")
-# print(angles)
-
-# 角度分布写入文件
-output_filename = 'output_angles.txt' 
-with open(output_filename, 'w') as file:
-    for angle in angles:
-        file.write(f'{angle:.2f}\n')
+# 输出夹角分布
+print("向量 (1, 0, 0) 与水分子平面法向量之间的夹角分布:")
+print(angles)
