@@ -7,4 +7,4 @@ coords = outcar_data["coords"]
 forces = outcar_data["forces"]
 
 print(coords.shape)
-print(forces.shape)
+print(forces.shape
