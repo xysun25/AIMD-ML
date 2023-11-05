@@ -6,7 +6,7 @@ def read_xyz(filename):
     with open(filename, 'r') as file:
         lines = file.readlines()
         num_atoms = int(lines[0].strip())
-        coords = [
+        coords = []
         for i in range(2, num_atoms + 2):
             atom_data = lines[i].strip().split()
             coords.append([float(atom_data[1]), float(atom_data[2]), float(atom_data[3])])
