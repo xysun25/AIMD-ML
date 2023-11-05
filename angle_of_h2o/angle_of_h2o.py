@@ -12,7 +12,7 @@ def read_xyz(filename):
             coords.append([float(atom_data[1]), float(atom_data[2]), float(atom_data[3])])
     return np.array(coords)
 
-# 计算平面的法向量
+# 计算平面的法向
 def calculate_normal_vector(atom1, atom2, atom3):
     vector1 = atom1 - atom2
     vector2 = atom2 - atom3
